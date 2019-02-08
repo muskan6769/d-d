@@ -97,7 +97,7 @@ a:focus {
 }
 
 .tm-nav-link {
-  color: white;
+  color: #FFA500;
 }
 
 .tm-navbar.scroll .tm-nav-link {
@@ -132,7 +132,7 @@ a:focus {
 /* Hero */
 
 #hero {
-  background-image: url(../img/the-town-bg-01.jpg);
+  background-image: url(../img/main.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 375px;
@@ -178,6 +178,7 @@ a:focus {
 .tm-hero-title {
   font-size: 3.5rem;
   text-shadow: 2px 2px 2px #333;
+  color: #FFA500;
 }
 
 .tm-intro-next {
