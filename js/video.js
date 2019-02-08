@@ -1,18 +1,12 @@
 (function(){
-	var video = document.getElementById("video");
-	var vendorUrl = window.URL || window.webkitURL;
 
-	navigator.getMedia = navigator.getUserMedia ||
-						 navigator.webkitGetUserMedia ||
-						 navigator.mozGetUserMedia ||
-						 navigator.msGetUserMedia;
-	navigator.getMedia({
-		video: true,
-		audio: true
-	} , function(stream) {
-		video.src = vendorUrl.createObjectURL(stream);
-		video.play();
-	} , function(error) {
-		//error
-	});
+	var videoWeb = document.getElementById("video");
+	var playing = document.getElementById("play");
+	var paused = document.getElementById("stop");
+	navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    .then(stream => videoWeb.srcObject = stream)
+    .then(stream => pc.addStream(stream))
+    .catch(function(err) {
+       console.log(err);
+    })
 })();
