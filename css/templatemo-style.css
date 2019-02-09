@@ -426,7 +426,7 @@ figure.effect-honey:hover h2 i {
 /* Contact */
 
 #contact {
-  color: white;
+  color: black;
   background-image: url(../img/the-town-bg-02.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -434,6 +434,7 @@ figure.effect-honey:hover h2 i {
   position: relative;
   padding-bottom: 50px;
   padding-top: 160px;
+  opacity: 0.7;
 }
 
 .tm-underline {
@@ -477,7 +478,7 @@ figure.effect-honey:hover h2 i {
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  /* Chrome, Firefox, Opera, Sari 10.1+ */
   color: white;
   opacity: 1; /* Firefox */
 }
@@ -558,6 +559,8 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100px;
+    max-height: 500px;
   }
 
   .tm-btn-submit {
