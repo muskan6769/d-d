@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Demo</title>
-	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/video.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta id="theme-color" name="theme-color" content="#fff">
+	<base target="_blank">
+	<title>Media Recorder API Demo</title>
+	<link rel="stylesheet" href="css/video.css" />
+	<style>
+		a#downloadLink {
+			display: block;
+			margin: 0 0 1em 0;
+			min-height: 1.2em;
+		}
+		p#data {
+			min-height: 6em;
+		}
+	</style>
 </head>
 <body>
-
-	<div class="console">
-		<video id="video" src='' muted autoplay playsinline></video>
+	<div id="container">
+	<div style = "text-align:center;">
+		<h1>Media Recorder API Demo </h1>
+		<video controls autoplay></video><br>
+		<button id="rec" onclick="onBtnRecordClicked()">Record</button>
+		<button id="pauseRes"   onclick="onPauseResumeClicked()" disabled>Pause</button>
+		<button id="stop"  onclick="onBtnStopClicked()" disabled>Stop</button>
+		<button id="stateButton" onclick="onStateClicked()">trace state</button>
 	</div>
-	<div>
-		<button class="btn-lg-primary" id="start_btn">Start Recording</button>
-		<button class="btn-lg-primary" id="stop_btn">Stop Recording</button>
-	</div>
-
+	<a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
+	<p id="data"></p>
+	<script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
 	<script src="js/video.js"></script>
+	<div id = "text">
+		<p id="Content"></p>
+	</div>
 </body>
 </html>
